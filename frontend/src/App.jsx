@@ -1,23 +1,36 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Home from './pages/Home';
-import Statistics from './pages/Stats';
+import Page1 from './pages/Stats';
 import PublicSpeaking from './pages/PublicSpeaking';
 import Business from './pages/Business';
 import Psychology from './pages/Psychology';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/page1",
+    element: <Page1 />, //////////////////////////////////////
+  },
+  {
+    path: "/public-speaking",
+    element: <PublicSpeaking />,
+  },
+  {
+    path: "/business",
+    element: <Business />,
+  },
+  {
+    path: "/psychology",
+    element: <Psychology />,
+  },
+]);
+
 function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/statistics" element={<Statistics />} />
-        <Route path="/public-speaking" element={<PublicSpeaking />} />
-        <Route path="/business" element={<Business />} />
-        <Route path="/psychology" element={<Psychology />} />
-      </Routes>
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
