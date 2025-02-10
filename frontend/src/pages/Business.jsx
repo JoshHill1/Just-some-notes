@@ -12,11 +12,13 @@ function Business() {
   }, []);
 
   return (
-    <div>
+    <div className='pg-content'>
       {pageData ? (
-        <>
+        <div className='unit-block'>
           <h2>{pageData.header}</h2>
-          <p>{pageData.content}</p>
+          <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+            {pageData.content}
+          </pre>
           {pageData.image1 && (
             <img
               src={`http://127.0.0.1:8000${pageData.image1}`}
@@ -31,7 +33,7 @@ function Business() {
               style={{ maxWidth: '300px' }}
             />
           )}
-        </>
+        </div>
       ) : (
         <p>Loading...</p>
       )}

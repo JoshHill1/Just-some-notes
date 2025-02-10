@@ -12,11 +12,13 @@ function PublicSpeaking() {
   }, []);
 
   return (
-    <div>
+    <div style={{ padding: '2rem' }}>
       {pageData ? (
         <>
-          <h2>{pageData.header}</h2>
-          <p>{pageData.content}</p>
+                    <h2>{pageData.header}</h2>
+          <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+            {pageData.content}
+          </pre>
           {pageData.image1 && (
             <img
               src={`http://127.0.0.1:8000${pageData.image1}`}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../App.css'
 
 function Statistics() {
   const [stats, setStats] = useState([]);
@@ -12,12 +13,14 @@ function Statistics() {
   }, []);
 
   return (
-    <div style={{ padding: '2rem' }}>
+    <div className='pg-content'>
       {stats.length > 0 ? (
         stats.map((item, index) => (
-          <div key={index} style={{ marginBottom: '2rem' }}>
+          <div key={index} className='pg-card'>
             <h2>{item.header}</h2>
-            <p>{item.content}</p>
+            <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+              {item.content}
+            </pre>
             {item.image1 && (
               <img
                 src={`http://127.0.0.1:8000${item.image1}`}
