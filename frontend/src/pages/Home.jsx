@@ -7,18 +7,10 @@ function Home() {
       <h1>Welcome to the Homepage</h1>
       <nav>
         <ul>
-          <li>
-            <Link to="/statistics">Statistics</Link>
-          </li>
-          <li>
-            <Link to="/public-speaking">Public Speaking</Link>
-          </li>
-          <li>
-            <Link to="/business">Business</Link>
-          </li>
-          <li>
-            <Link to="/psychology">Psychology</Link>
-          </li>
+          <li><Link to="/statistics">Statistics</Link></li>
+          <li><Link to="/public-speaking">Public Speaking</Link></li>
+          <li><Link to="/business">Business</Link></li>
+          <li><Link to="/psychology">Psychology</Link></li>
         </ul>
       </nav>
     </div>
