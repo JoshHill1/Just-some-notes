@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../App.css'
 
 function Home() {
   return (
-    <div style={{ padding: '2rem' }}>
+    <div className='home-p' style={{ padding: '2rem' }}>
       <h1>Welcome to the Homepage</h1>
       <nav>
         <ul>

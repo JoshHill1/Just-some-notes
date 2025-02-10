@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../App.css'
 
 function PublicSpeaking() {
   const [speakingData, setPublicSpeakingData] = useState([]);
@@ -15,23 +16,24 @@ function PublicSpeaking() {
     <div style={{ padding: '2rem' }}>
       {speakingData.length > 0 ? (
         speakingData.map((item, index) => (
-          <div key={index} style={{ marginBottom: '2rem' }}>
+          <div key={index} className='pg-card'>
             <h2>{item.header}</h2>
+            <p className='sub-txt'>{item.sub_text}</p>
             <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
               {item.content}
             </pre>
             {item.image1 && (
               <img
-                src={`http://127.0.0.1:8000${item.image1}`}
+                src={`${item.image1}`}
                 alt={`Public Speaking Image 1-${index}`}
-                style={{ maxWidth: '300px', marginRight: '1rem' }}
+                style={{ maxWidth: '40%', maxHeight: '50vh', marginRight: '1rem', marginTop: '1rem' }}
               />
             )}
             {item.image2 && (
               <img
-                src={`http://127.0.0.1:8000${item.image2}`}
+                src={`${item.image2}`}
                 alt={`Public Speaking Image 2-${index}`}
-                style={{ maxWidth: '300px' }}
+                style={{ maxWidth: '40%', maxHeight: '50vh' }}
               />
             )}
           </div>

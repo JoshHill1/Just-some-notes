@@ -1,3 +1,15 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  
+  text-rendering: optimizeLegibility;
+}
+
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
@@ -10,5 +22,67 @@
 }
 
 .pg-card {
-  border: 1px solid red;
+  border: 1px solid rgb(100, 100, 100);
+  margin: 10px 0;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.sub-txt{
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+.card-txt {
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+.home-p ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.home-p li a {
+  display: block;
+  background: linear-gradient(rgba(102, 102, 102, 0.05), 90%, #A47764);
+  background-size: 100% 100%;
+  background-position: bottom;
+  transition: background-size 0.6s ease;
+  margin: 4px;
+  padding: 10vh;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.home-p li a:hover {
+  transition: background-size 0.4s ease;
+  background-size: 280% 280%;
+  /* background: linear-gradient(rgba(102, 102, 102, 0.05), 40%, #A47764); */
+}
+
+
+
+/************    Light Mode    ***********/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  .sub-txt{
+    opacity: 0.8;
+  }
 }
