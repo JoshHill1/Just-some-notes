@@ -12,6 +12,7 @@ function Home() {
           <li><Link to="/public-speaking">Public Speaking</Link></li>
           <li><Link to="/business">Business</Link></li>
           <li><Link to="/psychology">Psychology</Link></li>
+          <li><Link to="/test-commit">Test Commit</Link></li>
         </ul>
       </nav>
     </div>

@@ -5,6 +5,7 @@ import Statistics from './pages/Stats';
 import PublicSpeaking from './pages/PublicSpeaking';
 import Business from './pages/Business';
 import Psychology from './pages/Psychology';
+import TestCommit from './pages/TestCommit';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/psychology",
     element: <Psychology />,
+  },
+  {
+    path: "/test-commit",
+    element: <TestCommit />,
   },
 ]);
 

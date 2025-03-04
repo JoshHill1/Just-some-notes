@@ -35,3 +35,7 @@ class Psychology(models.Model):
     image2 = models.ImageField(upload_to='page_images/', blank=True, null=True)
     class Meta:
         verbose_name_plural = "Psychology"
+
+class TestCommit(models.Model):
+    header = models.CharField(max_length=200)
+    anything = models.TextField()
